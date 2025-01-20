@@ -46,11 +46,18 @@ class _CalculadoraState extends State<Calculadora> {
 
   Widget _botao(String valor) {
     return TextButton(
+      onPressed: () => _pressionarBotao(valor),
       child: Text(
         valor,
         style: const TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
       ),
-      onPressed: () => _pressionarBotao(valor),
+    );
+  }
+
+  Widget _botaoLimpar() {
+    return TextButton(
+      child: const Icon(Icons.delete_forever),
+      onPressed: () => _pressionarBotao(_limpar),
     );
   }
 
@@ -96,7 +103,7 @@ class _CalculadoraState extends State<Calculadora> {
           ),
         ),
         Expanded(
-          child: _botao(_limpar),
+          child: _botaoLimpar(),
         )
       ],
     );

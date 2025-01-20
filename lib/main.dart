@@ -12,7 +12,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Layout',
+      title: 'Calculadora',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 98, 183, 58)),
         useMaterial3: true,
@@ -47,10 +47,11 @@ class _HomePageState extends State<HomePage> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Expanded(
+            flex: 1,
             child: Container(),
           ),
           Expanded(
-            flex: 7,
+            flex: 6,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -62,7 +63,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Expanded(
-                  flex: 2,
+                  flex: 4,
                   child: Container(
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
@@ -94,7 +95,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           Expanded(
-            flex: 2,
+            flex: 1,
             child: Container(
               //alignment: Alignment.center,
               //color: Colors.blue,
@@ -102,12 +103,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ],
-      )),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      )), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
